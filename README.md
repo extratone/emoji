@@ -1,6 +1,6 @@
 # Extending Emoji
 
-![Nilla](\png\gboard-emoji-kitchen-dupe-funny-1.png)
+![Nilla](png/gboard-emoji-kitchen-dupe-funny-1.png)
 
 ## Extending emoji via [Gboard](https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin&hl=en_US&gl=US) ([Emoji Kitchen](https://emoji.kitchen/)) + anything else, tbh.
 
