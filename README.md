@@ -6,4 +6,6 @@
 
 As of right now, this repo contains only the combined images found in "**[160 awesome, ridiculous, and downright creepy Gboard emoji combos you should try out](https://www.androidpolice.com/2021/01/16/gboard-emoji-kitchen-how-to-examples/)**" on *Android Police*.
 
+→ → → → [**<u>Download the collected png files in .zip form</u>**](https://github.com/extratone/emoji/raw/main/png/png.zip). ← ← ← ←
+
 Please do reach out however you'd like if you'd be interested in contributing.
