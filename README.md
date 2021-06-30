@@ -8,7 +8,9 @@ As of right now, this repo contains only the combined images found in "**[160 aw
 
 → → → → [**<u>Download the collected png files in .zip form</u>**](https://github.com/extratone/emoji/raw/main/png/png.zip). ← ← ← ←
 
-Please do reach out however you'd like if you'd be interested in contributing.
+To receive (more-or-less) regular updates and/or contribute to the collection, subscribe to/add **[the iCloud Shared Folder](https://www.icloud.com/sharedalbum/#B0I5n8hH4Gq611X)**
+
+Please do reach out however you'd like if you'd be interested in contributing further/in a more formal sense.
 
 ***
 
