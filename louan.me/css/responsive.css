@@ -1,0 +1,472 @@
+/* RESPONSIVE DESIGN */
+/* ACCUEIL */
+@media screen and (max-width: 1000px) {
+    footer {
+        z-index : 1;
+        transform : translateY(10px)
+    }
+    
+    #accueil .partieDroite {
+        width : 100vw;
+        height : 50vh;
+    }
+    
+    .postScroll::before {
+        animation-name : transitionBandeHaut-Petit;
+    }
+    
+    .postScroll::after {
+        animation-name : transitionBandeBas-Petit
+    }
+    
+    @keyframes transitionBandeHaut-Petit {
+        from {
+            height : 22.3vh;
+            top : 0;
+        }
+        
+        to {
+            height : 25vh;
+            top : 50vh;
+        }
+    }
+    
+    @keyframes transitionBandeBas-Petit {
+        from {
+            height : 22.3vh;
+        }
+        
+        to {
+            height : 25vh;
+        }
+    }
+    
+    @keyframes transitionTitre {
+        0% {
+            transform : translateY(0);
+            color : #080034;
+            font-size : 60pt;
+        }
+
+        50% {
+            transform : translateY(25vh);
+            color : #080034;
+            font-size : 50pt;
+        }
+
+        100% {
+            transform : translateY(25vh);
+            color : white;
+            font-size : 40pt;
+        }
+    }
+    
+    nav {
+        position : fixed;
+        width : 100vw;
+        z-index : 3;
+        top : 0;
+        left : 0;
+    }
+    
+    .version {
+        color : white;
+    }
+    
+    .credits {
+        color : white;
+    }
+    
+    #accueil .partieGauche {
+        height : 50vh;
+        width : 100vw;
+    }
+    
+    .listeBoutons {
+        display : flex;
+        flex-direction : row;
+        justify-content : space-around;
+        width : 100vw;
+        max-height : 50vh;
+        flex-wrap : wrap;
+        margin-top : 7vh
+    }
+    
+    .listeBoutons button {
+        font-size : 15pt;
+        width : 25vw;
+        padding : 1%;
+        position : relative;
+        border-radius : 15px;
+        transform : translateY(-50vh);
+        min-height : 100px
+    }
+    
+    .listeBoutons button:nth-child(odd) {
+        margin-right : 25vw;
+    }
+
+    @keyframes transitionPartieGauche {
+        from {
+            transform : translateY(-50vh);
+        } 
+
+        to {
+            transform : translateY(0);
+        }
+    }
+
+    @keyframes transitionBoutons {
+        from {
+            transform : translateY(-50vh);
+        }
+
+        to {
+            transform : translateY(0);
+        }
+    }
+    
+    /* SECTIONS */
+    
+    #accueil .partieDroite {
+        top : 50vh;
+        left : 0;
+    }
+   
+    #accueil .partieDroite h2 {
+        position:absolute;
+        top : -1vw;
+        width : 100vw;
+        font-size : 4.5vw;
+        z-index : 1;
+    }
+    
+    .postClick::before {
+        animation-name : ouvertureBandeHaut;
+        animation-duration : 500ms;
+    }
+
+    #changementSection::before {
+        animation-name : fermetureBandeHaut;
+        animation-duration : 500ms;
+
+    }
+    
+    .postClick::after {
+        animation-name : ouvertureBandeBas;
+        animation-duration : 500ms;
+    }
+
+    #changementSection::after {
+        animation-name : fermetureBandeBas;
+        animation-duration : 500ms;
+
+    }
+    
+    @keyframes ouvertureBandeHaut {
+        from {
+            width : 100vw;
+            height : 25vh;
+            z-index : 1;
+            top : 50vh
+        }
+
+        to {
+            width : 100vw;
+            height : 10vh;
+            z-index : 1;
+            top : 50vh
+        }
+    }
+
+    @keyframes fermetureBandeHaut {
+        from {
+            width : 100vw;
+            height : 10vh;
+            z-index : 1;
+            top : 50vh
+        }
+
+        to {
+            width : 100vw;
+            height : 25vh;
+            z-index : 1;
+            top : 50vh
+        }
+    }    
+    
+    @keyframes ouvertureBandeBas {
+        from {
+            width : 100vw;
+            height : 25vh;
+            z-index : 1;
+        }
+
+        to {
+            width : 100vw;
+            height : 10vh;
+            z-index : 1;
+        }
+    }
+
+    @keyframes fermetureBandeBas {
+        from {
+            width : 100vw;
+            height : 10vh;
+            z-index : 1;
+        }
+
+        to {
+            width : 100vw;
+            height : 25vh;
+            z-index : 1;
+        }
+    }
+    
+    /* GENERAL */
+    .contenu {
+        height : 30vh;
+        transform: translateY(10vh);
+    }
+    
+    #accueil .partieDroite .details {
+        width : 100vw;
+        bottom : 4vh;
+    }
+     
+    /* Section Présentation */
+    #presentation img{
+        width : 10%;
+        transform: translateY(0);
+    }
+    #presentation .texte {
+        width : 80%;
+        font-size : 14pt;
+    }
+
+    #presentation .contenu {
+        justify-content: space-around;
+        padding : 0;
+    }
+    
+    /* Section Centres d'intérêt */
+    #interet .contenu {
+        display:flex;
+        flex-direction : column;
+        justify-content: space-around;
+        align-items:flex-start;
+        padding : 0;
+    }
+    
+    #interet .contenu>div {
+        display:flex;
+        justify-content : space-around;
+        width : 100%;
+    }
+
+    #interet .contenu>div:first-child {
+        margin-top : 0px;
+        transform : translateY(1vh)
+    }
+
+    #interet .contenu>div:last-child {
+        margin-bottom : 0px;
+        transform : translateY(-1vh)
+    }
+
+    #interet .contenu>div>div {
+        border: 7px solid #000035;
+        height : 80px;
+        width : 80px;
+        position : relative;
+    }
+
+    #interet h3 {
+        font-size : 3vh;
+        align-self : center;
+    }
+    
+    /* Section Compétences */
+    .barre {
+        flex-direction : row;
+        justify-content : space-between;
+        width : 90%;
+        flex-wrap : wrap;
+    }
+
+    .comp {
+        width : 40%;
+        height : 15px;
+        border-radius : 1000px;
+    }
+
+    .comp::before {
+        top : -3.5vw;
+        font-size : 2.5vw;
+    }
+    
+    .barre>div:first-child {
+        width : 100%
+    }
+    
+    /* Section Parcours */
+    .point {
+        width : 15px;
+        height : 15px;
+    }
+
+    #pointFinal {
+        width : 30px;
+        height : 30px;
+    }
+
+    .point:nth-child(odd)::before {
+        height : 10px;
+        width : 70px;
+    }
+
+    .point:nth-child(even)::before {
+        height : 10px;
+        width : 70px;
+    }
+
+    #pointFinal::before {
+        width : 80px;
+        top : 10px;
+    }
+
+    .point:nth-child(odd) .texte {
+        left : 80px;
+        top : -5px;
+    }
+
+    .point:nth-child(even) .texte {
+        right : 85px;
+        top : 0;
+    }
+
+    #parcours h3 {
+        font-size : 2.5vw;
+    }
+
+    #parcours .texte p {
+        display:none;
+    }
+}
+
+/* CREATION */
+@media screen and (max-width: 1000px) {
+    #creations h1 {
+        font-size : 55pt
+    }
+    
+    .galerie {
+        background-color : #1D1D1D
+    }
+    
+    .ligne {
+        flex-direction : column;
+        height : 100vh;
+        margin-bottom : 10px;
+        align-items : center;
+    }
+    
+    .ligne:nth-child(odd) {
+        flex-direction: column;
+    }
+    
+    .creation {
+        width : 100vw;
+        height : 50vh;
+        max-width : 100%;
+    }
+    
+    .description {
+        width : 100vw;
+        min-height : 50vh;
+        max-width : 100%;
+    }
+    
+    .description h2 {
+        font-size : 20pt;
+        margin : 20px;
+    }
+
+    .description h2::after {
+        width : 40px;
+        height : 40px;
+        top : 10vw;
+    }
+    
+    .description p {
+        font-size : 13pt
+    }
+    
+    .boutonsContenu {
+        max-height : 100%;
+        max-width : 100%;
+    }
+
+    .imageAffichee {
+        max-width : 80vw;
+        min-width : 15vw;
+        max-height : 80vh;
+        min-height : 30vh; 
+    }
+
+    .galerie iframe {
+        width : 100vw;
+        height : 50vh;
+        max-width : 100%;
+    } 
+}
+
+/* CONTACT */
+@media screen and (max-width: 1000px) {
+    #contact main {
+        flex-direction : column;
+    }
+
+    #contact h1 {
+        font-size : 40pt;
+        margin : 0 0 10px 0;
+    }
+
+    #contact footer {
+        width : 100vw;
+    }
+
+    #contact .partieGauche {
+        width : 100vw;
+        min-height : 70vh;
+    }
+
+    #contact .partieDroite {
+        width : 100vw;
+        min-height : 30vh;
+        flex-direction : row;
+    }
+
+    #contact .partieDroite p::before {
+        width : 3vw;
+        height : 3vw;
+    }
+
+    #contact form {
+        width : 70vw;
+    }
+ 
+    /* EN TRAVAUX */
+    #contact form::after {
+        width : 90vw;
+        top : 5vh ;
+        left : -10vw;
+    }
+
+    #contact form::before {
+        width : 30vw;
+        height : 115%;
+        top : 0;
+        left : 25%;
+    }
+}

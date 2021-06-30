@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Apprenez à me connaitre en découvrant mes centres d'intérêt, mes compétences et mes créations dans ce Portfolio. Louan Bengmah" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+        <title>Louan Bengmah | Me contacter</title>
+        <link rel="shortcut icon" href="medias/favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,900|Ubuntu" rel="stylesheet">
+    </head>
+    <body id="contact">
+        <header>
+            <div class="selectLang">
+                <a href="contact_en.php.html">
+                    <img src="medias/lang_fr.svg">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="creations.html">Créations</a></li>
+                    <li><a href="medias/cv.pdf" target="_blank">CV</a></li>
+                    <li><a class="pageActuelle">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="partieGauche">
+                <h1>Me contacter</h1>
+                <form action="contact.php.html" method="post" class="test">
+                    <div>
+                        <label for="email">Adresse E-mail *</label>
+                        <input type="email" name="email" id="email" required/>
+                    </div>
+                    <div class="nom_prenom">
+                        <div>
+                            <label for="nom">Nom</label>
+                            <input type="text" name="nom" id="nom" />
+                        </div>
+                        <div>
+                            <label for="prenom">Prénom</label>
+                            <input type="text" name="prenom" id="prenom" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for=message>Message *</label>
+                        <textarea name="message" id="message" rows="5" cols="50" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">Envoyer</button>
+                    </div>
+                    
+                                    </form>
+            </div>
+            <div class="partieDroite">
+                <div class="informationsContact">
+                    <a href="tel:0781600535"><p class="numeroTel">+33 (0)7 81 60 05 35</p></a>
+                    <p class="adresseEmail">louanben.pro@gmail.com</p>
+                    <p class="localisation">Nantes / Laval</p>
+                </div>
+                <div class="reseauxSociauxContact">
+                    <a href="https://twitter.com/louanben" target="_blank"><div class="twitter"></div></a>
+                    <a href="https://www.instagram.com/louan.pro/" target="_blank"><div class="instagram"></div></a>
+                    <a href="https://www.linkedin.com/in/louan-bengmah-75196817b/" target="_blank"><div class="linkedin"></div></a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <a href="changelog.html" class="version">Vers. 2.3</a>
+            <span class="credits">Made with ❤ by Louan Bengmah©2019</span>
+            <div></div>
+        </footer>
+        <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+        <script type="text/javascript" src="js/lang.js"></script>
+    </body>
+</html>

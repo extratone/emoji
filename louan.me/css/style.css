@@ -1,0 +1,1444 @@
+body {
+    margin : 0;
+}
+
+#accueil {
+    overflow:hidden;
+}
+
+#accueil main {
+    height : 100vh;
+    position:relative;
+    display:flex;
+}
+
+#accueil main::before {
+    content:"";
+    display:block;
+    width : 100vw;
+    height : 22.3vh;
+    position : absolute;
+    background-color : #080034;
+    top : 0;
+    right : 0;
+    animation-duration : 500ms;
+    z-index : -1;
+}
+
+#accueil main::after {
+    content:"";
+    display:block;
+    width : 100vw;
+    height : 22.3vh;
+    position : absolute;
+    background-color : #080034;
+    bottom : 0;
+    right : 0;
+    animation-duration : 500ms;
+    z-index : -1;
+}
+
+.preScroll::before {
+    animation-name : bandeHaut;
+}
+
+.preScroll::after {
+    animation-name : bandeBas;
+}
+
+@keyframes bandeHaut {
+    from {
+        transform : translateX(-100vw)
+    }
+    
+    to {
+        transform : translateX(0);
+    }
+}
+
+@keyframes bandeBas {
+    from {
+        transform : translateX(100vw)
+    }
+    
+    to {
+        transform : translateX(0);
+    }
+}
+
+h1 {
+    margin : auto;
+    position : relative;
+    font-family : Nunito;
+    font-size : 60pt;
+    color : #080034;
+    text-align : center;
+    animation-name : titrePart1;
+    /* Le JS modifiera le nom de l'animation en "transitionTitre" après le scroll*/
+    animation-duration : 500ms;
+    animation-delay : 500ms;
+    animation-fill-mode: forwards;
+    transform : translateY(-100vh);
+}
+
+h1 span {
+    display:block;
+    font-size : 40pt;
+    animation-name : titrePart2;
+    animation-duration : 500ms;
+    animation-delay : 500ms;
+    animation-fill-mode: forwards;
+    transform : translateY(200vh);
+}
+
+h1::selection {
+    background-color : #080034;
+}
+
+h1 span::selection {
+    background-color : #080034;
+}
+
+h1 br::selection {
+    background-color : white;
+}
+
+@keyframes titrePart1 {
+    from {
+        transform : translateY(-100vh)
+    }
+    
+    to {
+        transform : translateY(0);
+    }
+}
+
+@keyframes titrePart2 {
+    from {
+        transform : translateY(200vh)
+    }
+    
+    to {
+        transform : translateY(0);
+    }
+}
+
+.instructionScroll {
+    position:absolute;
+    top : 82vh;
+    width : 300px;
+    height : 70px;
+    left : calc(50vw - 150px);
+    display:flex;
+    justify-content : center;
+    z-index : 2;
+    opacity : 0;
+    animation-name : instructionScroll;
+    animation-duration : 1s;
+    animation-delay : 1s;
+    animation-fill-mode: forwards;
+}
+
+.instructionScroll::before {
+    content:"cliquez-ici ou scrollez";
+    position:absolute;
+    color : white;
+    top : 90px;
+    font-family : Ubuntu;
+    font-size : 12pt;
+    cursor : pointer;
+}
+
+.pictoScroll {
+    position:relative;
+    width: 40px;
+    height: 60px;
+    border : 5px solid white;
+    border-radius : 30px;
+    cursor : pointer;
+}
+
+.pictoScroll::after {
+    content:"";
+    display:block;
+    width:6px;
+    height:10px;
+    background-color:white;
+    position:absolute;
+    top:8px;
+    left: calc(50% - 3.5px);
+    border-radius : 50px;
+    animation-name : animPictoScroll;
+    animation-duration : 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animPictoScroll {
+    0% {
+        transform: translateY(0);
+    }
+    
+    50% {
+        transform: translateY(10px);
+    }
+    
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes instructionScroll {
+    from {
+        opacity : 0;
+    }
+    
+    to {
+        opacity : 1;
+    }
+}
+
+/* ------------------------------- POST-SCROLL -------------------------- */
+@keyframes transitionInstrucScroll {
+    from {
+        transform : translateY(0);
+        opacity : 1;
+        display:block;
+    }
+    
+    to {
+        transform : translateY(50vh); 
+        opacity : 1;
+        display:none;
+    }
+}
+
+.postScroll::before, .postScroll::after {
+    animation-name : transitionBandes;
+    animation-fill-mode: forwards;
+    animation-duration : 1s;
+}
+
+@keyframes transitionBandes {
+    0% {
+        width : 100vw;
+        height : 22.3vh;
+    }
+    
+    50% {
+        width : 50vw;
+        height : 22.3vh;
+    }
+    
+    100% {
+        width : 50vw;
+        height : 50vh;
+    }
+}
+
+@keyframes transitionTitre {
+    0% {
+        transform : translateX(0);
+        color : #080034;
+        font-size : 60pt;
+    }
+    
+    50% {
+        transform : translateX(25vw);
+        color : #080034;
+        font-size : 50pt;
+    }
+    
+    100% {
+        transform : translateX(25vw);
+        color : white;
+        font-size : 40pt;
+    }
+}
+
+@keyframes transitionTitreSpan {
+    0% {
+        transform : translateY(0);
+        font-size : 40pt;
+    }
+    
+    50% {
+        transform : translateY(0);
+        font-size : 35pt;
+    }
+    
+    100% {
+        transform : translateY(0);
+        font-size : 25pt;
+    }
+}
+
+nav {
+    position : fixed;
+    width : 50vw;
+    z-index : 3;
+    top : 0;
+    left : 0;
+}
+
+#accueil nav {
+    display:none;
+    /* Le JS le mettra en display:block après le scroll */
+    animation-name : transitionNav;
+    animation-duration : 500ms;
+}
+
+#creations nav {
+    background-color : rgba(255, 255, 255, 0.4);
+    padding-right : 30px;
+    border-radius : 0 0 30px 0;
+}
+
+#creations nav:hover {
+    background-color : rgba(255, 255, 255);
+    padding-right : 30px;
+    border-radius : 0 0 30px 0;
+}
+
+nav ul{
+    display : flex;
+    justify-content : space-around;
+}
+
+nav ul li {
+    list-style-type: none;
+    font-family: Ubuntu;
+    font-size : 15pt;
+}
+
+nav a {
+    color : #1D1D1D;
+    text-decoration: none;
+}
+
+.pageActuelle {
+    cursor : pointer;
+}
+
+nav a:after {
+    content:"";
+    height : 5px;
+    display:block;
+    background-color : #080035;
+    animation-duration : 300ms;
+    transform-origin : left;
+    animation-fill-mode: forwards;
+}
+
+nav a:not(.pageActuelle):hover:after {
+    animation-name : hoverNav;
+}
+
+nav a:not(.pageActuelle):not(:hover):after {
+    animation-name : notHoverNav;
+}
+
+@keyframes hoverNav {
+    from {
+        transform: scaleX(0);
+    }
+    
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes notHoverNav {
+    from {
+        transform : scaleX(1);
+    }
+    
+    to {
+        transform : scaleX(0);
+    }
+}
+
+.selectLang img {
+    width : 30px;
+}
+
+.selectLang {
+    position : absolute;
+    top : 15px;
+    left : 30px;
+    z-index : 4;
+}
+
+#accueil .selectLang {
+    display:none;
+}
+
+.hoverActive img{
+    animation-name : rotateLang;
+    animation-duration : 500ms;
+    animation-timing-function: cubic-bezier(1, 1, 0, -0.02);
+     animation-fill-mode: forwards;
+}
+
+.selectLang(:not(.hoverActive)) img {
+    animation-name : rotateLang;
+    animation-duration : 500ms;
+    animation-timing-function: cubic-bezier(1, 1, 0, -0.02);
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotateLang {
+    0% {
+        transform : rotate(0);
+    }
+    
+    50% {
+        transform : rotate(360deg);
+    }
+    
+    100% {
+        transform : rotate(720deg);
+    }
+}
+
+footer {
+    height : 50px;
+    align-items : center;
+    justify-content: space-around;
+}
+
+#accueil footer {
+    position : fixed;
+    bottom : 0;
+    left : 0;
+    width : 50vw;
+    display:none;
+    /* Le JS le mettra en display:flex après le scroll */
+    animation-name : transitionNav;
+    animation-duration : 500ms;
+    
+}
+
+#creations footer {
+    display:flex;
+    background-color : #1D1D1D;
+    border-top : 5px solid #080034;
+}
+
+
+.version {
+    color : #1D1D1D;
+    text-decoration : none;
+    font-family: ubuntu;
+    font-size : 7pt;
+}
+
+#creations .version {
+    color : white;
+    font-size : 10pt;
+    padding-left : 10px;
+}
+
+.credits {
+    color : #1D1D1D;
+    font-family: ubuntu;
+    font-size : 8pt;
+    transform : translateX(-1vw);
+}
+
+#creations .credits {
+    color : white;
+    font-size: 10pt;
+}
+
+.footerContact {
+    color : white;
+    font-size : 10pt;
+    font-family : ubuntu;
+    padding-right : 10px;
+}
+
+#accueil .partieGauche {
+    position: absolute;
+    width : 50vw;
+    height : 100vh;
+    display:none;
+    /* Le JS le mettra en display:flex après le scroll */
+    justify-content : center;
+    align-items: center;
+    animation-name : transitionPartieGauche;
+    animation-duration : 500ms;
+}
+
+.listeBoutons {
+    display : flex;
+    flex-direction : column;
+    justify-content : space-around;
+    align-items : center;
+    height : 80vh;
+}
+
+.listeBoutons button {
+    border : none;
+    background-color : #1D1D1D;
+    color : white;
+    font-family : Ubuntu;
+    font-size : 15pt;
+    width : 25vw;
+    padding : 4%;
+    position : relative;
+    border-radius : 15px;
+    transform : translateX(-50vw);
+    animation-name : transitionBoutons;
+    animation-duration : 200ms;
+    animation-fill-mode : forwards;
+    cursor : pointer;
+    outline : none;
+}
+
+@keyframes transitionPartieGauche {
+    from {
+        transform : translateX(-50vw);
+    } 
+    
+    to {
+        transform : translateX(0);
+    }
+}
+
+@keyframes transitionBoutons {
+    from {
+        transform : translateX(-50vw);
+    }
+    
+    to {
+        transform : translateX(0)
+    }
+}
+
+@keyframes transitionNav {
+    from {
+        transform : translateX(-50vw);
+    }
+    
+    to {
+        transform: translateX(0)
+    }
+}
+
+/* SECTIONS */
+
+#accueil .partieDroite {
+    position:absolute;
+    width : 50vw;
+    height : 100vh;
+    top : 0;
+    right : 0;
+}
+
+#accueil .partieDroite section {
+    display: none;
+    width : 100%;
+    height : 100%;
+}
+
+#accueil .partieDroite h2 {
+    color : white;
+    font-family : Nunito;
+    text-align : center;
+    position:absolute;
+    top : -1vw;
+    width : 50vw;
+    font-size : 4vw;
+    z-index : 1;
+}
+
+#accueil .partieDroite .details {
+    color : white;
+    position : absolute;
+    width : 50vw;
+    text-align : center;
+    font-family : nunito;
+    bottom : 7vh;
+    z-index : 2;
+    
+}
+
+.contenu {
+    display:flex;
+    height : 66vh;
+    transform: translateY(17vh);
+}
+
+.postClick::before, .postClick::after {
+    animation-name : ouvertureBande;
+    animation-duration : 500ms;
+}
+
+#changementSection::before, #changementSection::after {
+    animation-name : fermetureBande;
+    animation-duration : 500ms;
+    
+}
+
+@keyframes ouvertureBande {
+    from {
+        width : 50vw;
+        height : 50vh;
+        z-index : 1;
+    }
+    
+    to {
+        width : 50vw;
+        height : 17vh;
+        z-index : 1;
+    }
+}
+
+@keyframes fermetureBande {
+    from {
+        width : 50vw;
+        height : 17vh;
+        z-index : 1;
+    }
+    
+    to {
+        width : 50vw;
+        height : 50vh;
+        z-index : 1;
+    }
+}
+
+/* Section Présentation */
+
+#presentation img{
+    width : 20%;
+    transform: translateY(-20px);
+}
+#presentation .texte {
+    width : 50%;
+    align-self : center; 
+    font-family : Ubuntu;
+    font-size : 15pt;
+    color : #080034;
+    text-align : justify
+}
+
+#presentation .contenu {
+    justify-content: space-around;
+    padding : 20px;
+}
+
+#presentation strong {
+    font-weight: 500;
+    color : black;
+}
+
+/* Section Centres d'intérêt */
+
+#interet .contenu {
+    display:flex;
+    flex-direction : column;
+    justify-content: space-around;
+    align-items:center;
+    padding : 0;
+}
+
+#interet .contenu>div {
+    display:flex;
+    justify-content : space-around;
+    width : 100%;
+}
+
+#interet .contenu>div:first-child {
+    margin-top : 20px;
+}
+
+#interet .contenu>div:last-child {
+    margin-bottom : 20px;
+}
+
+#interet .contenu>div>div {
+    background-color : white;
+    border-radius: 500px;
+    border: 10px solid #000035;
+    height : 110px;
+    width : 110px;
+    position : relative;
+}
+
+#interet .contenu>div>div:hover {
+    animation-name : rotationPicto;
+    animation-duration: 500ms;
+}
+
+@keyframes rotationPicto {
+    from {
+        transform : rotate(0);
+    }
+    
+    to {
+        transform : rotate(360deg);
+    }
+}
+
+#interet h3 {
+    font-size : 7vh;
+    font-family: ubuntu;
+    color : #080034;
+    visibility : hidden;
+}
+
+#interet .contenu>div>div::after {
+    content:"";
+    display:block;
+    width : 70%;
+    height : 70%;
+    position : absolute;
+    top : 15%;
+    left : 15%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.ci_devWeb::after {
+    background-image : url(../medias/pictogrammes/bleu/devWeb.svg);
+}
+
+.ci_program::after {
+    background-image : url(../medias/pictogrammes/bleu/programmation.svg);
+}
+
+.ci_jeuxVideos::after {
+    background-image : url(../medias/pictogrammes/bleu/jeuxVideos.svg);
+}
+
+.ci_graphisme::after {
+    background-image : url(../medias/pictogrammes/bleu/graphisme.svg);
+}
+
+.ci_audiovisuel::after {
+    background-image : url(../medias/pictogrammes/bleu/audiovisuel.svg);
+}
+
+.ci_musique::after {
+    background-image : url(../medias/pictogrammes/bleu/musique.svg);
+}
+
+/* Section Compétences */
+
+#competences .contenu {
+    display:flex;
+    flex-direction : row;
+    justify-content: center;
+}
+
+.barre {
+    display:flex;
+    flex-direction : column;
+    justify-content : space-around;
+    height : 100%;
+    width : 70%;
+}
+
+.comp {
+    width : 100%;
+    height : 20px;
+    border : 2px solid #080034;
+    border-radius : 1000px;
+    position:relative
+}
+
+.comp::after {
+    content:"";
+    display:block;
+    height : 100%;
+    background-color : #080034;
+    border-radius : 1000px;
+    animation-name : affichageBarre;
+    animation-fill-mode: forwards;
+    animation-duration : 1s;
+    animation-delay : 200ms;
+    transform-origin: left;
+    transform : scaleX(0);
+}
+
+.comp::before {
+    position:absolute;
+    top : -30px;
+    left : 10px;
+    font-family : ubuntu;
+    font-size : 17pt;
+    color : #080034;
+    font-weight : 900;
+}
+
+.comp_frontEnd::before {
+    content : "Développement Front-End"
+}
+
+.comp_frontEnd::after {
+     width : 95%;
+}
+
+.comp_backEnd::before {
+    content : "Développement Back-End"
+}
+
+.comp_backEnd::after {
+    width : 90%
+}
+
+.comp_audiovisuel::before {
+    content : "Production audiovisuelle"
+}
+
+.comp_audiovisuel::after {
+    width : 60%
+}
+
+.comp_infographie::before {
+    content : "Production graphique"
+}
+
+.comp_infographie::after {
+    width : 78%
+}
+
+.comp_communication::before {
+    content : "Communication"
+}
+
+.comp_communication::after {
+    width : 50%
+}
+
+.comp_anglais::before {
+    content : "Anglais"
+}
+
+.comp_anglais::after {
+    width : 93%
+}
+
+/* NOM DES COMPETENCES EN ANGLAIS */
+
+.enLang .comp_frontEnd::before {
+    content : "Front-End development"
+}
+
+.enLang .comp_backEnd::before {
+    content : "Back-End development"
+}
+
+.enLang .comp_audiovisuel::before {
+    content : "Audiovisual and Multimedia"
+}
+
+.enLang .comp_infographie::before {
+    content : "Graphism"
+}
+
+.enLang .comp_communication::before {
+    content : "Communication"
+}
+
+.enLang .comp_anglais::before {
+    content : "English"
+}
+@keyframes affichageBarre{
+    from {
+        transform : scaleX(0);
+    }
+    
+    to {
+        transform : scaleX(1);
+    }
+}
+
+/* Section Parcours */
+
+#parcours .contenu {
+    flex-direction : column;
+    align-items: center;
+}
+
+.frise {
+    display:flex;
+    flex-direction : column-reverse;
+    justify-content : space-around;
+    background-color : #080034;
+    align-items : center;
+    width : 15px;
+    height : 90%;
+}
+
+.friseBas {
+    width : 15px;
+    height : 10%;
+    background-color : #080034;
+}
+
+.point {
+    position : relative;
+    background-color : white;
+    width : 20px;
+    height : 20px;
+    border-radius: 40px;
+    border : 7px solid #080034;
+}
+
+#pointFinal {
+    width : 35px;
+    height : 35px;
+    border-radius: 55px;
+    border : 10px solid #080034;
+}
+
+#parcours .texte {
+    position : absolute;
+    font-family : ubuntu;
+    width : calc(50vh * 0.7);
+    opacity : 0;
+    animation-name : affichageParcoursTexte;
+    animation-duration : 300ms;
+    animation-fill-mode: forwards;
+}
+
+#parcours h3 {
+    margin : 0;
+}
+
+#parcours h3 a {
+    color: black
+}
+
+.point:nth-child(odd)::before {
+    content : "";
+    display:block;
+    height : 15px;
+    width : 100px;
+    position : absolute;
+    background-color : #080034;
+    z-index : -1;
+    border-radius : 0 30px 30px 0;
+    left : 0;
+    top : 0;
+}
+
+.point:nth-child(even)::before {
+    content : "";
+    display:block;
+    height : 15px;
+    width : 100px;
+    position : absolute;
+    background-color : #080034;
+    z-index : -1;
+    border-radius : 30px 0 0 30px;
+    right : 0;
+    top : 3px;
+}
+
+#pointFinal::before {
+    width : 110px;
+    top : 10px;
+}
+
+.point:nth-child(odd) .texte {
+    left : 120px;
+    top : -30px;
+}
+
+.point:nth-child(even) .texte {
+    right : 120px;
+    top : -30px;
+    text-align : right;
+    transform-origin: right;
+}
+
+#parcours h3 {
+    font-size : 15pt;
+}
+
+#pointFinal .texte p {
+    text-align : justify;
+}
+
+#parcours .texte p {
+    margin : 5px 0 0 0;
+    font-size : 13pt;
+}
+
+.details a {
+    color : white;
+    text-decoration: none;
+}
+
+
+@keyframes affichageParcoursTexte {
+    from {
+        opacity : 0;
+    }
+    
+    to {
+        opacity : 1;
+    }
+}
+
+
+/* PAGE CREATIONS */
+
+#creations main {
+    margin-top : 70px;
+}
+
+#creations h1 {
+    margin-bottom : 70px;
+    animation-name : none;
+    transform : translateY(0);
+}
+
+.galerie {
+    display:flex;
+    flex-direction : column;
+}
+
+.ligne {
+    display:flex;
+    justify-content : center;
+    min-height : 50vh;
+}
+
+.ligne:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.creation {
+    width : 50vw;
+    background-size : cover;
+    background-position : center;
+    background-repeat: no-repeat;
+}
+
+.description {
+    width : 50vw;
+    background-color : #080034;
+    display:flex;
+    flex-direction : column;
+    justify-content : space-around;
+}
+
+.description h2 {
+    color : white;
+    font-family : nunito;
+    align-self: center;
+    position : relative;
+    display:flex;
+    flex-direction : column;
+    font-size : 23pt;
+    margin : 25px;
+}
+
+.description h2::after {
+    content : "";
+    display: block;
+    width : 45px;
+    height : 45px;
+    position: absolute;
+    z-index : 3;
+    background-position: center;
+    background-size : contain;
+    background-repeat: no-repeat;
+    align-self : center;
+    top : 50px;
+}
+
+.description p {
+    color : white;
+    font-family: ubuntu;
+    margin : 30px;
+    text-align : justify;
+    font-size : 15pt
+}
+
+.crea_graphisme h2::after {
+    background-image : url(../medias/pictogrammes/blanc/graphisme.svg);
+}
+
+.crea_audiovisuelle h2::after {
+    background-image : url(../medias/pictogrammes/blanc/audiovisuel.svg);
+}
+
+.crea_devWeb h2::after {
+    background-image : url(../medias/pictogrammes/blanc/devWeb.svg);
+}
+
+/* BOUTONS */
+
+.boutonsContenu {
+    display:none;
+    /* Le JS le mettra en display:flex lors d'un hover */
+    justify-content: center;
+    align-items: center;
+    position : relative;
+    height : 100%;
+    background-color : rgba(8, 0, 52, 0.35);
+}
+
+.boutonsContenu div {
+    margin : 10px;
+    width : 100px;
+    height : 100px;
+    border : 5px solid white;
+    border-radius : 100px;
+    background-repeat : no-repeat;
+    cursor : pointer;
+}
+
+.btnPlus {
+    background-image : url("../medias/pictogrammes/blanc/btnPlus.svg");
+    background-size : 60px;
+    background-position: center;
+}
+
+.btnPdf {
+    background-image : url("../medias/pictogrammes/blanc/btnPdf.svg");
+    background-size : 50px;
+    background-position: center;
+}
+
+.btnPlay {
+    background-image : url(../medias/pictogrammes/blanc/btnPlay.svg);
+    background-size : 50px;
+    background-position: 60% 50%;
+}
+
+.btnLien {
+    background-image : url(../medias/pictogrammes/blanc/btnLien.svg);
+    background-size : 70px;
+    background-position: center;
+}
+
+/* MODAL GALERIE */
+.modalGalerie {
+    position : fixed;
+    z-index : 100;
+    width : 100vw;
+    height : 100vh;
+    display:none;
+    /* Le JS le mettra en display:flex */
+    justify-content : center;
+    align-items: center;
+    top : 0;
+    left : 0;
+    background-color : rgba(29, 29, 29, 0.46);
+}
+
+.imageAffichee {
+    max-width : 50vw;
+    min-width : 15vw;
+    max-height : 80vh;
+    min-height : 30vh; 
+}
+
+.galerie iframe {
+    width : 50vw;
+    height : 50vh;
+}
+
+/* PAGE CONTACT */
+
+#contact main {
+    display:flex;
+}
+
+#contact h1 {
+    animation-name : none;
+    transform : translateY(0);
+    font-size : 40pt;
+    margin : 0 0 50px 0;
+}
+
+#contact footer {
+    position : fixed;
+    bottom : 0;
+    left : 0;
+    display:flex;
+    justify-content: space-around;
+    width : 70vw;
+}
+
+#contact .partieGauche {
+    width : 70vw;
+    min-height : 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact .partieDroite {
+    width : 30vw;
+    min-height : 100vh;
+    background-color : #080034;
+    display:flex;
+    flex-direction : column;
+    justify-content: space-around;
+    align-items : center;
+}
+
+#contact .partieDroite p {
+    color : white;
+    font-family : ubuntu;
+    font-size : 17pt;
+    display:flex;
+}
+
+#contact .partieDroite p::before {
+    content : "";
+    display:block;
+    width : 1.5vw;
+    height : 1.5vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right : 30px;
+}
+
+#contact .partieDroite a {
+    text-decoration: underline white;
+}
+
+#contact .numeroTel::before {
+    background-image : url(../medias/pictogrammes/blanc/telephone.svg)
+}
+
+#contact .adresseEmail::before {
+    background-image : url(../medias/pictogrammes/blanc/mail.svg)
+}
+
+#contact .localisation::before {
+    background-image : url(../medias/pictogrammes/blanc/localisation.svg)
+}
+
+.reseauxSociauxContact {
+    display:flex;
+    justify-content: space-around;
+    width : 25vw;
+}
+
+.reseauxSociauxContact div {
+    width : 50px;
+    height : 50px;
+    background-size : contain;
+    background-position: center;  
+}
+
+.twitter {
+    background-image : url(../medias/reseauxSociaux/twitter.png);
+}
+
+.instagram {
+    background-image : url(../medias/reseauxSociaux/instagram.png);
+}
+
+.linkedin {
+    background-image : url(../medias/reseauxSociaux/linkedin.png);
+}
+
+#contact form {
+    display:flex;
+    flex-direction : column;
+    align-items : center;
+    width : 30vw;
+    align-self : center;
+    position:relative;
+}
+
+#contact label {
+    font-family : ubuntu;
+    color : #080034;
+    font-size : 15pt;
+    margin-bottom : 2px;
+}
+
+#contact form>div {
+    display:flex;
+    flex-direction : column;
+    width : 100%;
+    margin-bottom : 15px
+}
+
+#contact .nom_prenom {
+    flex-direction : row;
+    justify-content : space-between;
+}
+
+#contact .nom_prenom div {
+    display:flex;
+    flex-direction : column;
+    width : 47%;
+}
+
+#contact input {
+    border : none;
+    height : 40px;
+    background-color : rgb(240, 240, 240);
+    border-bottom: 7px solid #080034;
+    font-family : ubuntu;
+    font-size : 17pt;
+    padding : 3px
+}
+
+#contact textarea {
+    border : none;
+    height : 80px;
+    background-color : rgb(240, 240, 240);
+    border-bottom: 7px solid #080034;
+    resize : none;
+    font-family : ubuntu;
+    font-size : 14pt;
+}
+
+#contact button {
+    border : 7px solid #080035;
+    background-color : #080034;
+    color : white;
+    font-family : nunito;
+    font-size : 18pt;
+    margin-top : 15px;
+    width : 70%;
+    align-self : center;
+    height : 50px;
+    cursor : pointer;
+}
+
+#contact button:hover {
+    background-color : white;
+    color : #080034;
+    font-weight : 600;
+}
+
+.msgForm {
+    color : red;
+    font-family : ubuntu;
+}
+
+/* EN TRAVAUX */
+
+/* #contact form:not(.test)::after {
+    content:"";
+    display:block;
+    width : 40vw;
+    height : 100%;
+    position : absolute;
+    top : 0;
+    left : -5vw;
+    background-image : url(../medias/en_travaux.svg);
+    background-size : contain;
+    background-repeat : no-repeat;
+    background-position : bottom;
+}
+
+#contact form:not(.test)::before {
+    content:"";
+    display:block;
+    width : 20vw;
+    height : 100%;
+    position:absolute;
+    top : 0;
+    left : -0vw;
+    background-image : url(../medias/mascotte_travaux.svg);
+    background-size : contain;
+    background-repeat : no-repeat;
+    background-position : bottom;
+    animation-name : arriveeMascotteTravaux;
+    animation-duration : 500ms;
+}
+
+@keyframes arriveeMascotteTravaux {
+    from {
+        transform : translateY(-100vh)
+    }
+    
+    to {
+        transform : translateY(0)
+    }
+} */
+
+
+/* SOURCES CREATIONS GALERIE*/
+
+.emojiMashupBot {
+    background-image : url(../medias/creations/miniatures/emoji_mashup.jpg);
+}
+
+.leStudio {
+    background-image : url(../medias/creations/miniatures/le_studio.jpg);
+}
+
+.afficheManif {
+    background-image : url(../medias/creations/miniatures/affiche_manif.jpg);
+}
+
+.plume {
+    background-image: url(../medias/creations/miniatures/film_plume.jpg);
+}
+
+.oldPortfolio {
+    background-image: url(../medias/creations/miniatures/old_portfolio.jpg)
+}
+
+.magGoogle {
+    background-image: url(../medias/creations/miniatures/magazine_google.jpg)
+}
+
+.autoportraitPS {
+    background-image: url(../medias/creations/miniatures/autoportrait_ps.jpg)
+}
+
+.storyboard {
+    background-image: url(../medias/creations/miniatures/storyboard.jpg)
+}
+
+.studyTime {
+    background-image: url(../medias/creations/miniatures/study_time.jpg)
+}
+
+/* PAGE EMOJI MASHUP BOT */
+
+#projet-emojimashup h1 {
+    font-weight: 600;
+    margin-top: 10vh;
+}
+
+#projet-emojimashup h2 {
+    text-align: center;
+    width: 20rem;
+}
+
+#projet-emojimashup section {
+    height: 50vh;
+    background-color: aquamarine
+}
+
+#projet-emojimashup div {
+    height: 50vh;
+}
+
+#projet-emojimashup .image {
+    padding-left: 50px
+}
+
+#projet-emojimashup .image img {
+    max-height: 100%;
+}
+
+#projet-emojimashup .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#projet-emojimashup .text p {
+    max-width: 20rem;
+}

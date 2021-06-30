@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 520 425" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-4880.39,-1985.39)">
+        <g transform="matrix(1.37154,0,0,0.815893,8650.73,0)">
+            <g>
+                <g transform="matrix(0.607589,0,0,1.22565,-3470.79,-1003.02)">
+                    <path d="M1500,3000C1500,3000 1397.1,3000 1311.83,3000C1250.07,3000 1200,3041.72 1200,3093.19C1200,3118.96 1200,3140 1200,3140" style="fill:none;stroke:rgb(8,0,52);stroke-width:21.73px;"/>
+                </g>
+                <g transform="matrix(-0.607589,0,0,1.22565,-1648.03,-1003.02)">
+                    <path d="M1500,3000C1500,3000 1397.1,3000 1311.83,3000C1250.07,3000 1200,3041.72 1200,3093.19C1200,3113.98 1200,3130 1200,3130" style="fill:none;stroke:rgb(8,0,52);stroke-width:21.73px;"/>
+                </g>
+                <g transform="matrix(0.607589,0,0,1.22565,-3470.79,-1003.02)">
+                    <path d="M1800,3110C1800,3110 1800,3119.95 1800,3133.23C1800,3177.87 1756.95,3214.23 1703.38,3214.82C1669.35,3215.14 1634.86,3210.36 1600,3200C1531.24,3189.19 1464.59,3189.06 1400,3200C1365.3,3212.03 1331.53,3218.18 1298.58,3218.35C1272.51,3218.5 1247.45,3209.97 1228.95,3194.66C1210.45,3179.35 1200.05,3158.52 1200.05,3136.8C1200,3121.77 1200,3110 1200,3110" style="fill:none;stroke:rgb(8,0,52);stroke-width:21.73px;"/>
+                </g>
+                <g transform="matrix(1.3367,0,0,2.24703,-4455.09,-4134.56)">
+                    <path d="M1360,3060L1340,3060L1340,3080L1320,3080L1320,3100L1340,3100L1340,3120L1360,3120L1360,3100L1380,3100L1380,3080L1360,3080L1360,3060Z" style="fill:none;stroke:rgb(8,0,52);stroke-width:6.82px;"/>
+                </g>
+                <g transform="matrix(0.729107,0,0,1.22565,-3472.25,-987.086)">
+                    <circle cx="1375" cy="3061" r="19" style="fill:none;stroke:rgb(8,0,52);stroke-width:12.5px;"/>
+                </g>
+                <g transform="matrix(0.729107,0,0,1.22565,-3472.25,-899.846)">
+                    <circle cx="1375" cy="3061" r="19" style="fill:none;stroke:rgb(8,0,52);stroke-width:12.5px;"/>
+                </g>
+                <g transform="matrix(0.729107,0,0,1.22565,-3499.96,-944.188)">
+                    <circle cx="1375" cy="3061" r="19" style="fill:none;stroke:rgb(8,0,52);stroke-width:12.5px;"/>
+                </g>
+                <g transform="matrix(0.729107,0,0,1.22565,-3444.54,-944.188)">
+                    <circle cx="1375" cy="3061" r="19" style="fill:none;stroke:rgb(8,0,52);stroke-width:12.5px;"/>
+                </g>
+                <g transform="matrix(0.729107,0,0,1.22565,-3650.88,-990.762)">
+                    <path d="M1430,3020L1470,3020" style="fill:none;stroke:rgb(8,0,52);stroke-width:12.5px;"/>
+                </g>
+                <g transform="matrix(0.729107,0,0,1.22565,-3585.03,-990.762)">
+                    <path d="M1430,3020L1470,3020" style="fill:none;stroke:rgb(8,0,52);stroke-width:12.5px;"/>
+                </g>
+                <g transform="matrix(0.729107,0,0,0.685781,-3653.07,619.507)">
+                    <path d="M1350,2990L1350,2960L1450,2960L1450,2990" style="fill:none;stroke:rgb(8,0,52);stroke-width:12.5px;"/>
+                </g>
+                <g transform="matrix(0.729107,0,0,0.481506,-3507.25,1224.16)">
+                    <path d="M1350,2990L1350,2960L1450,2960L1450,2990" style="fill:none;stroke:rgb(8,0,52);stroke-width:12.5px;"/>
+                </g>
+                <g transform="matrix(0.729107,0,0,1.22565,-3653.07,-990.762)">
+                    <path d="M1500,2990C1500,2990 1500,2911.4 1500,2876.43C1500,2861.57 1511.47,2849.21 1526.3,2848.11C1508.09,2853.06 1516.71,2848.91 1525.93,2848.17C1534.69,2847.43 1543.35,2850.4 1549.82,2856.34C1556.29,2862.29 1559.97,2870.67 1559.97,2879.46C1560,2888 1560,2897.85 1560,2905.7C1560,2918.62 1567.73,2930.28 1579.63,2935.32C1585.57,2937.83 1591.56,2938.38 1597.6,2936.7C1610.8,2932.99 1619.92,2920.95 1619.92,2907.24C1620,2876.33 1620,2800 1620,2800" style="fill:none;stroke:rgb(8,0,52);stroke-width:12.5px;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

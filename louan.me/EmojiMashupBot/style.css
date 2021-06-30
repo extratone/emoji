@@ -1,0 +1,316 @@
+body {
+    background-color : rgb(29, 161, 243);
+    color : white;
+    font-family : "Source Sans Pro";
+    margin : 0;
+    overflow-x : hidden;
+    display:flex;
+    flex-direction : column;
+    justify-content: space-between;
+    min-height : 100vh;
+}
+
+h1 {
+    font-size : 35pt;
+    margin : 10px 0 0 0;
+    text-align : center;
+}
+
+main {
+    display:flex;
+    flex-direction : column;
+    justify-content: space-between;
+    padding : 0;
+    margin-top : 5vh;
+}
+
+.how-it-works {
+    display:block;
+    font-size : 25pt;
+    text-align : center;
+}
+
+.mashup-area {
+    display:flex;
+    justify-content : space-between;
+    width : 80%;
+    margin : auto;
+}
+
+
+.emoji-area {
+    width : 40%;
+    background-color : white;
+    border-radius : 10px;
+    max-height : 60vh;
+    position : relative;
+}
+
+.displayed-emoji {
+    animation-name : emoji-entry;
+    animation-duration : 700ms;
+    animation-fill-mode: forwards;
+    margin : auto;
+}
+
+@keyframes emoji-entry {
+    from {
+        height : 0;
+    }
+    
+    to {
+       height : 30vh;
+    }
+}
+
+@keyframes emoji-area-expend {
+    from {
+        width : 40%; 
+        border-radius : 10px;
+    }
+    
+    to {
+        width : 50%;
+        border-radius : 0;
+    }
+}
+
+.selector {
+    display:flex;
+    flex-wrap : wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    padding : 0 5%;
+    height : 50vh;
+    overflow-y:scroll;
+}
+
+.selector::-webkit-scrollbar {
+    width: 12px;
+}
+
+.selector::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius : 50px;
+}
+
+.selector::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius : 30px;
+}
+
+.selector::-webkit-scrollbar-button{
+    display:none
+}
+
+.selector img {
+    width : 70px;
+    margin-bottom : 20px;
+    margin-left : 20px;
+    cursor : pointer;
+}
+
+.selector img::selection {
+  background-color: transparent;
+}
+
+.switch {
+    width : 10%;
+    height : 8vw;
+    background-image : url(media/images/arrows.svg);
+    background-size : contain;
+    background-repeat : no-repeat;
+    background-position: center;
+    align-self : center;
+}
+
+.switch-rotate {
+    animation-name : switch-rotate;
+    animation-duration : 200ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes switch-rotate {
+    from {
+        transform : rotate(0);
+    }
+    
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+h2 {
+    color:black;
+    text-align : center;
+    margin : 0 0 10px 0;
+}
+
+.selected-emoji {
+    width : 50px;
+    height : 50px;
+}
+
+button {
+    font-family : "Source Sans Pro";
+    font-size : 1.5em;
+    background-color : rgb(27, 122, 181);
+    color : white;
+    border : none;
+    border-radius : 5000px;
+    height : 2em;
+    cursor : pointer;
+}
+
+.boutons {
+    align-self : center;
+    display:flex;
+    justify-content : space-around;
+    width : 800px;
+    margin-top : 80px;
+    align-items : center;
+}
+
+.mashup-button {
+    font-size : 2em;
+    height : 2em;
+}
+
+.boutons>button {
+    width : 30%
+}
+
+.boutons>a {
+    width : 30%;
+}
+
+.boutons>a>button {
+    width : 100%;
+}
+
+footer {
+    width : 100vw;
+    display:flex;
+    justify-content : space-around;
+    margin-top : 4vh;
+    font-size : 9pt;
+    background-color : rgb(39, 147, 214);
+    padding : 10px;
+    color : black
+}
+
+footer a {
+    color : black;
+}
+
+footer>div {
+    width : 25%
+}
+
+footer div div{
+    width : 100%;
+}
+
+.credits {
+    text-align : left;
+}
+
+.legal {
+    text-align : right;
+}
+
+.beta-test {
+    font-size : 15pt;
+    text-align: center;
+}
+
+.beta-test span {
+    color : white;
+}
+
+/* Mashup page */
+
+.mashup {
+    background-color : white;
+    border-radius : 10px;
+    color : black;
+    margin : 0 10vw;
+    padding : 0.5vw;;
+}
+
+.equation {
+    font-size : 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom : 20px;
+}
+
+.equation img {
+    width : 4vw;
+    margin : 10px;
+}
+
+.new-emoji {
+    display:flex;
+    justify-content: center;
+    margin-bottom : 20px;
+}
+
+iframe {
+    width : 70vw;
+    height : 60vh;
+    border:none;
+    font-size : 1.5vw;
+}
+
+.buttons {
+    align-self : center;
+    display:flex;
+    justify-content : space-around;
+    width : 800px;
+    margin-top : 80px;
+    align-items : center;
+}
+
+.buttons button {
+    width : 30%
+}
+
+.buttons>a {
+    width : 30%;
+}
+
+.buttons>a>button {
+    width : 100%;
+}
+
+
+.buttons .restart-button {
+    font-size : 2em;
+    height : 2em;
+}
+
+
+@media screen and (max-width: 850px) {
+    .boutons {
+        flex-direction: column;
+        height: 10em;
+        margin-top: 20px;
+    }
+    .bts-button {
+        display: none;
+    }
+    .buttons {
+        flex-direction: column;
+        height: 15em;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    iframe {
+        width: 100vw;
+    }
+}
+

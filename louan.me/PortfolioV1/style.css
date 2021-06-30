@@ -1,0 +1,877 @@
+
+
+/* GENERAL */
+
+body {
+    margin:0;
+}
+
+h2 {
+    font-family:'Nunito', sans-serif;
+}
+
+main p {
+    font-family:'Ubuntu', sans-serif;
+}
+
+main {
+    box-shadow: 1px 1px 10px black;
+}
+        
+
+
+/* HEADER */
+header {
+    position:fixed;
+    top:0;
+    left:0;
+    padding:20px 30px 30px;
+    box-sizing:border-box;
+    width:100%;
+    display:flex;
+    justify-content:flex-end;
+    background-image:linear-gradient(#FF9C06,  #FF9C06 100%);
+     background-position:left 30px;
+    background-size:100% 30px;
+    background-repeat:no-repeat;
+    z-index:2;
+}
+.logo {
+    max-width: 240px;
+    max-height: 240px;
+    width:20vw;
+    height:20vw;
+    background-color:#000035;
+    border-radius:50%;
+    font-size:40px;
+    color:white;
+    display:flex;
+    flex-shrink:0;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    top:10px;
+    left:20px;
+    box-shadow: 3px 2px 20px black;
+    z-index:3;
+}
+
+.logo img {
+    width:50%;
+}
+
+@media screen and (max-width: 1000px) {
+      .logo {
+        display: none;
+      }
+    }
+
+/* NAV */
+
+nav {
+    font-family:'Ubuntu', sans-serif;
+}
+
+nav ul a {
+	text-decoration:none;
+	color:white;
+    background-color:#000035;
+    border-radius: 0 30px 0 0;
+    padding:13px;
+    text-align:center;
+    display:inline-block;
+    width:15vw;
+    min-width:134px;
+    box-shadow: 1px 1px 10px black;
+}
+
+
+nav li {
+    margin-right: 10vw;
+}
+
+nav a:hover {
+	text-decoration:underline;
+}
+
+nav ul{
+    padding:0 0 30px;
+    margin:0 0 0;
+    font-size: 19px;
+    list-style-type:none;
+    display: flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+nav ul .navActive {
+    font-weight: 700;
+}
+
+.lang {
+    position:fixed;
+    top: 22px;
+    right: 22px;
+    max-height:47px;
+}
+
+.lang img{
+    height:47px;
+}
+
+
+/* MAIN */
+main {
+    margin-top:100px;
+    background-color:#CA7000;
+}
+
+/* MODAL */
+.modal {
+    width : 100vw;
+    height : 100vh;
+    position : fixed;
+    z-index : 5;
+    background-color : rgba(0, 0, 0, 0.49);
+    top : 0;
+    left : 0;
+}
+
+.modalContent {
+    width : 35vw;
+    margin-top : 20vh;
+    margin-left : calc(50% - 35vw / 2);
+    padding : 20px;
+    background-color : #FF9C06;
+    border-radius : 20px;
+    text-align : justify;
+}
+
+.modalContent button {
+    background-color : #000035;
+    border : none;
+    color : white;
+    width : 100%;
+    font-family : nunito;
+    font-size : 15pt;
+    border-radius : 20px;
+}
+
+/* SECTION D'ACCUEIL */
+.accueil {
+    background-color:#515151;
+    margin:0;
+    min-height:calc(100vh - 100px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    /* position:relative */
+}
+.accueil div {
+    align-self:flex-end;
+    text-align:right;
+    flex:1;
+}
+.accueil img {
+    height:650px;
+   
+    
+}
+.titre {
+    position:absolute;
+    text-align:center;
+    width:calc(100% - 650px);
+    margin-top:50px;
+    font-family:'Nunito', sans-serif;
+    font-weight: 900;
+    font-size:110px;
+    flex:0;
+    text-align:center;
+    color:#B3AFAF;
+    z-index:1;
+}
+
+
+
+.titre strong {
+    display:block;
+    font-weight:900;
+    font-size: 170px;
+}
+
+/* TXT DE PRESENTATION */
+
+.presentation_txt {
+    background-color:white;
+    padding-top:1px;
+    padding-bottom: 30px;
+    box-shadow: 1px 2px 10px black;
+}
+.presentation_txt h2{
+    font-size:40px;
+    color:white;
+    margin-right:600px;
+    background-image:
+        linear-gradient(#FF9C06,  #FF9C06 100%);
+    padding-left:30px;
+    border-radius: 0 45px 0 0;
+    box-shadow: 1px 1px 10px black;
+    min-width:800px;
+}
+
+.presentation_txt h2:first-of-type span{
+    background-image:
+        linear-gradient(#000035,  #000035 100%);
+    padding:5px 200px;
+    border-radius: 0 45px 0 0;
+    box-shadow: 1px 2px 10px black;
+}
+
+.presentation_txt h2:last-of-type span{
+    background-image:
+        linear-gradient(#000035,  #000035 100%);
+    padding:5px 170px;
+    border-radius: 0 45px 0 0;
+    box-shadow: 1px 2px 10px black;
+}
+
+.presentation_txt p {
+    text-align:justify;
+    margin: 0 100px;
+    font-size:30px;
+}
+
+/* PORTRAIT CHINOIS */
+
+.pChinois {
+    display:flex;
+    padding-top:80px;
+    position:relative;
+}
+
+.pChinois ul{
+    display:flex;
+    flex-wrap:wrap;
+    width:50%;
+}
+
+.pChinois li{
+    font-family:"Ubuntu";
+    list-style:none;
+    margin-bottom:50px;
+    font-size:25px;
+    padding:15px;
+    border-radius:50px;
+}
+
+.pChinois .fin li{
+    display:none;
+    background-color: #FF9C06;
+    color:white;
+    width:100%;
+    text-align:center;
+    margin-right:200px;
+}
+.pChinois .debut li{
+    background-color: #000035;
+    color:white;
+    width:100%;
+    text-align:center;
+    margin-left:200px;
+}
+
+#reponse:target .fin li{
+    display:inline;
+}
+
+#reponse:target a {
+    display:none;
+}
+
+.pChinois a {
+    background-color:grey;
+    position:absolute;
+    height:50px;
+    color:white;
+    text-decoration: none;
+    font-family:"Ubuntu";
+    border-radius:50px;
+    text-align:center;
+    padding-top:15px;
+    width:500px;
+    font-size:25px;
+    left:240px;
+    top:0;
+    
+}
+
+/* CENTRE d'INTERET */
+.centre_interet {
+    background-color: #848484;
+    padding-top:1px;
+    margin-top:50px;
+    padding-bottom:20px;
+    box-shadow: 1px 1px 10px black;
+}
+
+/* Titre */
+.centre_interet h2 {
+    font-size:40px;
+    color:white;
+    margin-right:600px;
+    background-image:
+        linear-gradient(#FF9C06,  #FF9C06 100%);
+    padding-left:30px;
+    border-radius: 0 45px 0 0;
+    box-shadow: 1px 1px 10px black;
+    min-width:800px;
+}
+
+.centre_interet h2 span {
+    background-image:
+        linear-gradient(#000035,  #000035 100%);
+    padding:5px 120px;
+    border-radius: 0 45px 0 0;
+    box-shadow: 1px 2px 10px black;
+}
+
+/* Presentation */
+.mes_ci {
+    position:relative;
+    padding-left:20vw;
+    padding-right:20vw;
+    
+}
+
+.mes_ci div {
+    display:flex;
+    justify-content:space-between;
+}
+
+.mes_ci>div:first-child {
+    margin-bottom: 15vw;
+}
+
+
+.mes_ci div div img{
+    width:10vw;
+}
+
+.mes_ci div div{
+    background-image:
+        linear-gradient(white, white 100%);
+    border-radius: 500px;
+    border: 1vw solid #000035;
+    box-shadow: 1px 1px 10px black;
+    height:10vw;
+    width:10vw;
+}
+
+.ci_nom{
+    display:none;
+    position:absolute;
+    top:35%;
+    font-size:7vw;
+    margin-top:0;
+    margin-bottom:0;
+    text-align:center;
+    color: white;
+}
+
+
+/* Affichage des textes */
+.mes_ci div:hover>.ci_nom{
+    display:block;
+    right:15%;
+    left:15%;
+}
+
+
+
+/* COMPÉTENCES */
+.competences{
+    background-color: #848484;
+    padding-top:1px;
+    margin-top:50px;
+    box-shadow: 1px 1px 10px black;
+}
+
+/* Titre */
+.competences h2 {
+    font-size:40px;
+    color:white;
+    margin-right:600px;
+    background-image:
+        linear-gradient(#FF9C06,  #FF9C06 100%);
+    padding-left:30px;
+    border-radius: 0 45px 0 0;
+    box-shadow: 1px 1px 10px black;
+    min-width:800px;
+}
+
+.competences h2 span {
+    background-image:
+        linear-gradient(#000035,  #000035 100%);
+    padding:5px 152px;
+    border-radius: 0 45px 0 0;
+    box-shadow: 1px 2px 10px black;
+}
+
+/* Ajustement général */
+.mes_comp img{
+    width:60px;
+    height:60px;
+}
+
+/* Ajustement, image par image */
+.comp_affinityD img{
+    margin-top:2px;
+}
+
+.comp_photoshop img{
+    margin-top:6px;
+    width:47px;
+}
+
+.comp_davinci img{
+    margin-top:4px;
+}
+
+.comp_html img{
+    width:50px;
+    margin-top:6px;
+}
+
+.comp_css img{
+    width:50px;
+    margin-top:6px;
+}
+
+/* Placement des div + présentation */
+.mes_comp div{
+    display:flex;
+    justify-content:space-around;
+    margin-bottom:25px;
+    flex-wrap:wrap;
+}
+
+.mes_comp div div{
+    max-height:70px;
+}
+
+.mes_comp div div div:first-of-type{
+    width:60px;
+    background-image:
+        linear-gradient(#000035,  #000035 100%);
+    border-radius:70px;
+    position:relative;
+    left:70px;
+    height:70px;
+    width:70px;
+}
+
+.mes_comp div div div:last-of-type{
+    background-image:
+        linear-gradient(#FF9C06,  #FF9C06 100%);
+    display:flex;
+    flex-wrap:wrap;
+    height:80px;
+    width:320px;
+    align-content:center;
+    justify-content:flex-start;
+    padding-left:90px;
+    border-radius:50px 90px 0px 50px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.mes_comp label{
+    font-family:"Nunito";
+    color:#000035;
+    width:100%;
+    font-size: 20px;
+}
+
+/* Style des barres de progression (ne marche que sur chrome) */
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 300px;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #000035;
+    border-radius: 10px;
+}
+
+progress[value]::-webkit-progress-value {
+    background-image: -webkit-linear-gradient(white,  white 100%);
+    border-radius: 10px;
+    border: 1px solid #000035;
+}
+
+/* seul style possible pour Mozilla Firefox. Le design convient mais je préfère celui de Chrome */
+progress[value]::-moz-progress-bar {
+    background-color: #000035;
+}
+
+
+
+
+
+/* ME CONTACTER */
+.contact{
+    padding-bottom:50px
+}
+
+/* Titre */
+.contact h2 {
+    font-size:40px;
+    color:white;
+    margin-right:600px;
+    background-image:
+        linear-gradient(#FF9C06,  #FF9C06 100%);
+    padding-left:30px;
+    border-radius: 0 45px 0 0;
+    box-shadow: 1px 1px 10px black;
+    min-width:800px;
+}
+
+.contact h2 span {
+    background-image:
+        linear-gradient(#000035,  #000035 100%);
+    padding:5px 188.5px;
+    border-radius: 0 45px 0 0;
+    box-shadow: 1px 2px 10px black;
+}
+
+/* Présentation générale */
+.contact form{
+    background-image:
+        linear-gradient(#FF9C06,  #FF9C06 100%);
+    display:flex;
+    margin:5px 20vw;
+    flex-wrap:wrap;
+    padding:30px 70px 0 70px;
+    border-radius:0 50px 0 0;
+    box-shadow: 2px 2px 10px black;
+}
+
+form div{
+    display:block;
+    width:100%;
+}
+
+form div:last-of-type{
+    text-align:right;
+}
+
+form div label{
+    display:block;
+    text-align:left;
+}
+
+.nom_prenom {
+    display:flex;
+}
+
+.contact input {
+    width:100%;
+    height:35px;
+    border-radius: 10px;
+    border:none;
+}
+
+.contact textarea{
+    width:100%;
+    border-radius:15px;
+    border:none;
+}
+
+label{
+    font-family:"Ubuntu";
+    color:white;
+}
+
+.contact input[type=text]{
+    width:95%;
+}
+
+.contact label[for=prenom]{
+    margin-left:23px;
+}
+
+.contact label{
+    margin-top:25px;
+}
+
+.contact button{
+    background-color:#000035;
+    border:none;
+    color:white;
+    font-family:"Nunito";
+    margin-top:25px;
+    margin-bottom:25px;
+    width:100%;
+    height:50px;
+    font-size:35px;
+    border-radius:15px;
+}
+
+/* MES PROJETS */
+/* MES CREATIONS */
+
+.creations {
+    padding-bottom:30px;
+    padding-top:150px;
+}
+
+@media screen and (max-width: 1000px) {
+      .creations {
+        padding-top:60px;
+      }
+    }
+
+.creations h2{
+    font-size:40px;
+    color:white;
+    margin-right:600px;
+    background-image:
+        linear-gradient(#FF9C06,  #FF9C06 100%);
+    padding-left:30px;
+    border-radius: 0 45px 0 0;
+    box-shadow: 1px 1px 10px black;
+    min-width:800px;
+}
+
+.creations h2 span{
+    background-image:
+        linear-gradient(#000035,  #000035 100%);
+    padding:5px 160px;
+    border-radius: 0 45px 0 0;
+    box-shadow: 1px 2px 10px black;
+}
+
+.mes_creations {
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    margin: 0 200px;
+    flex-direction:row;
+}
+
+.mes_creations div{
+    margin-top: 50px;
+}
+
+.plume{
+    display:flex;
+    width:100%;
+    justify-content:center;
+    background-image:
+        linear-gradient(to right, black,  transparent 120%);
+    max-height:500px
+}
+
+.plume iframe {
+    width:100%;
+    height:500px;
+    box-shadow: 1px 1px 50px black;
+    border:none;
+}
+
+.plume p {
+    display:none;
+    max-width:25%;
+    text-align:justify;
+    padding-left:10px;
+    padding-right:10px;
+    height:500px;
+    margin-top:0;
+    background-image:
+        linear-gradient(to right, #551816,  transparent 100%);
+    color:white;
+    vertical-align:middle;
+    font-size:18px;
+}
+
+.plume:hover iframe{
+    box-shadow:none;
+}
+
+.plume:hover p {
+    display:block;
+}
+
+@media screen and (max-width: 1000px) {
+    .plume {
+        height:200px;
+    }
+    .plume iframe {
+       height:200px 
+    }
+    
+    .plume:hover p {
+        display:none;
+    }
+}
+
+.projet {
+    position:relative;
+}
+
+.projet img{
+    box-shadow: 1px 1px 50px black;
+}
+
+.projet p {
+    position:absolute;
+    color:white;
+    height:100%;
+    font-size:20px;
+    display:none;
+    box-sizing:border-box;
+    background-image:
+        linear-gradient(black, transparent 100%);
+    text-align:justify;
+    left:0;
+    top:0;
+    margin:0;
+}
+
+.affiche_manif img{
+    width:500px;
+}
+
+.affiche_manif p {
+    width:500px;
+    padding: 10px 25px;
+}
+
+.autoportrait img{
+    width:500px;
+}
+
+.autoportrait p {
+    width:500px;
+    padding: 10px 25px;
+}
+.storyboard img {
+    width:700px;
+}
+
+.storyboard p {
+    width:700px;
+    padding: 10px 50px;
+}
+
+.study_time img {
+    width:700px;
+}
+
+.study_time p {
+    width:700px;
+    padding: 10px 50px;
+}
+
+.study_time a {
+    color : #F397CD;
+}
+
+.le_studio img {
+    width:700px;
+}
+
+.le_studio p {
+    width:700px;
+    padding: 10px 50px;
+}
+
+.le_studio a {
+    color: #E6007E;
+}
+
+.mes_creations div:not(:first-of-type):hover p {
+    display:block;
+}
+
+/* FOOTER */
+footer {
+    margin:0;
+    padding:1px 0;
+    background-color:#696969;
+    color:white;
+    font-family:"Ubuntu";
+    text-align:center;
+    position:relative;
+}
+
+.social {
+    position:absolute;
+    bottom: 20px;
+    left: 25px;
+}
+
+.social img {
+    width:35px;
+    padding: 0 10px;
+}
+
+.version {
+    font-size:8pt;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.version a {
+    color:white;
+    text-decoration:none;
+}
+
+/* ANIMATION */
+/* -- Crédits -- Les animations suivantes ont été créées à l'aide du générateur animasta.com */
+/* Rotation des pictogrammes */
+.rotate-center:hover{animation:rotate-center .6s ease-in-out both}
+@keyframes rotate-center{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+
+/* Arrivée du texte */
+.fade-in-fwd{animation:fade-in-fwd 1s cubic-bezier(.39,.575,.565,1.000) both}
+@keyframes fade-in-fwd{0%{transform:translateY(-50%) translateZ(-80px);opacity:0}100%{transform:translateY(-50%) translateZ(0);opacity:1}}
+
+.swing-in-top-fwd{animation:swing-in-top-fwd .8s cubic-bezier(.175,.885,.32,1.275) both}
+@keyframes swing-in-top-fwd{0%{transform:rotateX(-100deg);transform-origin:top;opacity:0}100%{transform:rotateX(0deg);transform-origin:top;opacity:1}}
+
+/* Réponses portrait chinois */
+.scale-in-tl{-webkit-animation:scale-in-tl .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-tl .5s cubic-bezier(.25,.46,.45,.94) both}
+@-webkit-keyframes scale-in-tl{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}}@keyframes scale-in-tl{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}}
+
+/* Arrivée Titre */
+.tracking-in-expand{-webkit-animation:tracking-in-expand 1.2s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-expand 1.2s cubic-bezier(.215,.61,.355,1.000) both}
+@-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+
+/* Arrivée Logo */
+.swing-in-bottom-fwd{-webkit-animation:swing-in-bottom-fwd 2s cubic-bezier(.175,.885,.32,1.275) both;animation:swing-in-bottom-fwd 2s cubic-bezier(.175,.885,.32,1.275) both}
+@-webkit-keyframes swing-in-bottom-fwd{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);-webkit-transform-origin:bottom;transform-origin:bottom;opacity:0}100%{-webkit-transform:rotateX(0);transform:rotateX(0);-webkit-transform-origin:bottom;transform-origin:bottom;opacity:1}}@keyframes swing-in-bottom-fwd{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);-webkit-transform-origin:bottom;transform-origin:bottom;opacity:0}100%{-webkit-transform:rotateX(0);transform:rotateX(0);-webkit-transform-origin:bottom;transform-origin:bottom;opacity:1}}
+
+/* Arrivée Logo */
+.roll-in-left{-webkit-animation:roll-in-left .6s ease-out both;animation:roll-in-left .6s ease-out both}
+@-webkit-keyframes roll-in-left{0%{-webkit-transform:translateX(-800px) rotate(-540deg);transform:translateX(-800px) rotate(-540deg);opacity:0}100%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);opacity:1}}@keyframes roll-in-left{0%{-webkit-transform:translateX(-800px) rotate(-540deg);transform:translateX(-800px) rotate(-540deg);opacity:0}100%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);opacity:1}}
+
+/* Séléction langage */
+/* Entrée */
+.lang:hover .actualLang img{-webkit-animation:roll-out-top .6s ease-in both;animation:roll-out-top .6s ease-in both}
+@-webkit-keyframes roll-out-top{0%{-webkit-transform:translateY(0) rotate(0deg);transform:translateY(0) rotate(0deg);opacity:1}100%{-webkit-transform:translateY(-800px) rotate(-540deg);transform:translateY(-800px) rotate(-540deg);opacity:0}}@keyframes roll-out-top{0%{-webkit-transform:translateY(0) rotate(0deg);transform:translateY(0) rotate(0deg);opacity:1}100%{-webkit-transform:translateY(-800px) rotate(-540deg);transform:translateY(-800px) rotate(-540deg);opacity:0}}
+
+.newLang {
+    display:none;
+}
+
+.lang:hover .newLang {
+    display:block;
+}
+
+
+.newLang img{-webkit-animation:roll-in-top .6s ease-out both;animation:roll-in-top .6s ease-out both}
+@-webkit-keyframes roll-in-top{0%{-webkit-transform:translateY(-800px) rotate(-540deg);transform:translateY(-800px) rotate(-540deg);opacity:0}100%{-webkit-transform:translateY(0) rotate(0deg);transform:translateY(0) rotate(0deg);opacity:1}}@keyframes roll-in-top{0%{-webkit-transform:translateY(-800px) rotate(-540deg);transform:translateY(-800px) rotate(-540deg);opacity:0}100%{-webkit-transform:translateY(0) rotate(0deg);transform:translateY(0) rotate(0deg);opacity:1}}
+
+/* Sortie */
+.actualLang img{animation:rotate-center .6s ease-in-out both}

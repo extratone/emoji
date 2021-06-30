@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Apprenez à me connaitre en découvrant mes centres d'intérêt, mes compétences et mes créations dans ce Portfolio. Louan Bengmah" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+        <title>Louan Bengmah | Développeur Web</title>
+        <link rel="shortcut icon" href="medias/favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+        <link rel="stylesheet" href="http://louan.me/css/responsive-portable.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,900|Ubuntu" rel="stylesheet">
+        <script type="text/javascript" src="js/accueil.js"></script>
+    </head>
+    <body id="accueil">
+        <header>
+            <div class="selectLang">
+                <a href="index_en.html">
+                    <img src="medias/lang_fr.svg">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="pageActuelle">Accueil</a></li>
+                    <li><a href="creations.html">Créations</a></li>
+                    <li><a href="medias/cv.pdf" target="_blank">CV</a></li>
+                    <li><a href="contact.php.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="preScroll">
+            <h1>
+                Louan Bengmah<br/>
+                <span>Développeur web</span>
+            </h1>
+            <div class="instructionScroll">
+                <div class="pictoScroll"></div>
+            </div>
+            <div class="partieGauche">
+                <div class="listeBoutons">
+                    <button data-section="presentation">Qui suis-je ?</button>
+                    <button data-section="interet">Mes centres d'intérêt</button>
+                    <button data-section="competences">Mes compétences</button>
+                    <button data-section="parcours">Mon parcours</button>
+                </div>
+            </div>
+            <div class="partieDroite">
+                <section id="presentation" data-section="presentation">
+                    <h2>Qui suis-je ?</h2>
+                    <div class="contenu">
+                        <div class="texte">
+                            <h3>Bienvenue sur mon Portfolio !</h3>
+                            <p>Je m'appelle <strong>Louan Bengmah</strong>, j'ai 18 ans et je suis en deuxième année de <strong>DUT MMI</strong>. Je sors d'un Bac ES. Je suis très interessé par le multimédia, le cinéma et tout type d'activités sur Internet. <br/> <br/>
+                            
+                            Je recherche actuellement une alternance afin de m'améliorer et de me professionaliser dans les domaines du <strong>Front-End</strong> et du <strong>Back-End</strong>.
+                            </p>
+                        </div>
+                        <img src="medias/mascotte.svg" class="mascotte" alt="Mascotte représentant Louan">
+                    </div>
+                </section>
+                <section id="interet" data-section="interet">
+                    <h2>Mes centres d'intérêt</h2>
+                    <div class="contenu">
+                        <div>
+                            <div class="ci_devWeb ci" data-label="Développement Web"></div>
+                            <div class="ci_program ci" data-label="Programmation"></div>
+                            <div class="ci_jeuxVideos ci" data-label="Jeux Vidéos"></div>
+                        </div>
+                        <h3 class="ci_label">Cacher des Easter Eggs</h3>
+                        <div>
+                            <div class="ci_graphisme ci" data-label="Graphisme"></div>
+                            <div class="ci_audiovisuel ci" data-label="Audiovisuel"></div>
+                            <div class="ci_musique ci" data-label="Musique"></div>
+                        </div>
+                    </div>
+                    <div class="details">Passez votre souris sur les différents éléments</div>
+                </section>
+                <section id="competences" data-section="competences">
+                    <h2>Mes compétences</h2>
+                    <div class="contenu">
+                        <div class="barre">
+                            <div></div>
+                            <div class="comp_frontEnd comp"></div>
+                            <div class="comp_backEnd comp"></div>
+                            <div class="comp_audiovisuel comp"></div>
+                            <div class="comp_infographie comp"></div>
+                            <div class="comp_communication comp"></div>
+                            <div class="comp_anglais comp"></div>
+                        </div>
+                    </div>
+                </section>
+                <section id="parcours" data-section="parcours">
+                    <h2>Mon parcours</h2>
+                    <div class="contenu">
+                        <div class="frise">
+                            <div class="point">
+                                <div class="texte">
+                                    <h3>Collège Hector Berlioz, Nantes</h3>
+                                    <p>Anglais Euro de la 6ème à la 3ème ;<br/>
+                                        Stage de 3ème à Oniris.</p>
+                                </div>
+                            </div>
+                            <div class="point">
+                                <div class="texte">
+                                    <h3>Lycée Guist'hau, Nantes</h3>
+                                    <p>Première et Terminale ES ;<br/>
+                                        Option Cinéma Audiovisuel.</p>
+                                </div>
+                            </div>
+                            <div class="point">
+                                <div class="texte">
+                                    <h3>DUT MMI, Laval</h3>
+                                    <p>Actuellement en deuxième années.</p>
+                                </div>
+                            </div>
+                            <div class="point" id="pointFinal">
+                                <div class="texte"><h3><a href="http://louan.me/wecraftapps.com">We Craft Apps</a></h3>
+                                    <p>Actuellement développeur web en contrat d'apprentissage.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="friseBas"></div>
+                    </div>
+                    <div class="details"><a href="medias/cv.pdf">Cliquez ici pour découvrir mon CV</a></div>
+                </section>
+            </div>
+        </main>
+        
+        <footer>
+            <a href="changelog.html" class="version">Vers. 2.3</a>
+            <span class="credits">Made with ❤ by Louan Bengmah©2019</span>
+            <div></div>
+        </footer>
+        <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+        <script type="text/javascript" src="js/bl1n43.js"></script>
+        <script type="text/javascript" src="js/lang.js"></script>
+    </body> 
+</html>
