@@ -12,7 +12,7 @@ To receive (more-or-less) regular updates and/or contribute to the collection, s
 
 Please do reach out however you'd like if you'd be interested in contributing further/in a more formal sense.
 
-[![Extended Emoji Custom Telegram Emoji Pack](https://user-images.githubusercontent.com/43663476/189457531-662c3a46-2e08-4099-8144-b2267ea1c792.png)](https://telegram.me/addemoji/DuckEmoji)
+[![Extended Emoji Custom Telegram Emoji Pack](https://user-images.githubusercontent.com/43663476/189457531-662c3a46-2e08-4099-8144-b2267ea1c792.png)](https://telegram.me/addemoji/DuckEmoji) #7
 
 ---
 
